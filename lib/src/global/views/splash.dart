@@ -20,10 +20,7 @@ class _SplashViewState extends ConsumerState<SplashView> {
   void initState() {
     super.initState();
 
-    /// check if the app is running in dev mode
     if (AppConfig.devMode) {
-      /// bypass authenticaion logic.
-      /// Navigate to Home
       Future.delayed(const Duration(seconds: 2)).then((value) {
         context.go(HomeView.routePath);
       });
@@ -32,11 +29,8 @@ class _SplashViewState extends ConsumerState<SplashView> {
         final user = ref.read(currentUserProvider);
         final token = ref.read(authTokenProvider);
 
-        /// Check if both the [user] and [token] have value
         if (user == null || token == null) {
-          /// Route the user to Authenticaion screen
         } else {
-          /// Route the user to Home screen
           context.go(HomeView.routePath);
         }
       });
