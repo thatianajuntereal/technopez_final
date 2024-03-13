@@ -17,7 +17,7 @@ dependencies:
   #riverpod
   flutter_riverpod:
   fpdart:
-  http:
+  http: ^1.1.0
   shared_preferences: ^2.0.17
 
   go_router: ^7.1.1
